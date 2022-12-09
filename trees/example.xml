@@ -1,0 +1,11 @@
+<root main_tree_to_execute="MainTree" BTCPP_format="4">
+  <BehaviorTree ID="MainTree">
+    <Fallback>
+      <ROSServiceConditionNode name="fail" topic="cond_fail" />
+      <Sequence>
+        <ROSServiceConditionNode name="success" topic="cond_success" />
+        <ROSServiceSyncActionNode name="action" topic="action" />
+      </Sequence>
+    </Fallback>
+  </BehaviorTree>
+</root>
